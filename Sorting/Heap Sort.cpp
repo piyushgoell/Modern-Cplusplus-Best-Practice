@@ -1,3 +1,5 @@
+// Heap Sort takes O(nlogn) in every case but still it is not used
+// because constants of merge and quick sort are relatively lower
 #include <iostream>
 using namespace std;
 
@@ -26,6 +28,8 @@ void heapSort(int *a, int n)
   // We First build the Heap In our case it is Max Heap
   // time complexity is O(n)
   buildHeap(a, n);
+  // We are reducing size of array in every call
+  // as we are putting largest element in the end
   for (int i = n - 1; i >= 1; i--)
   {
     swap(a[0], a[i]);
